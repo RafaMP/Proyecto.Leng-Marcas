@@ -9,19 +9,23 @@
   src: url(../font/tomorrow/Tomorrow-Bold.ttf);
 }
 *{padding: 0; margin: 0; box-sizing: border-box;}
+
 body{height: 900px;}
-header {
+
+#portada {
 	background: url('../imagenes/portada.png');
 	text-align: center;
+  background-position: center;
 	width: 100%;
 	height: auto;
+  position: relative;
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
 	overflow: hidden;
 	border-radius: 0 0 85% 85% / 30%;
 }
-header .overlay{
+#portada .overlay{
 	width: 100%;
 	height: 100%;
 	padding: 50px;
@@ -35,11 +39,14 @@ h1 {
 	font-size: 80px;
 	margin-bottom: 30px;
 }
-
-h3, p {
-	font-family: 'Open Sans', sans-serif;
+h2 {
+	font-family:'Courier New', cursive;
+	font-size: 60px;
 	margin-bottom: 30px;
+  text-align: center;
+  padding: 20px;
 }
+
 
 button {
   font-family: Texto1;
@@ -51,32 +58,27 @@ button {
 	background: #fff;
 	margin-bottom: 50px;
 	box-shadow: 0 3px 20px 0 #0000003b;
+  margin: 20px;
 }
-button:hover{
-	cursor: pointer;
-}
-.image-gallery {
-  padding: 50px 0;
-  background: #f4f4f4;
-  text-align: center;
+button:hover{background-color: grey;}
+
+/*****************************************INTRO SECTION**********************************************/
+.grid-2{
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
-.feature-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 100px 0;
-  background: #fff;
+.col-2 {padding: 4%;
+    font-size: 1.5em;
 }
 
-.feature-image img {
-  width: 150%;
-  height: 0%;
+#Intro img {
+  width: 100%;
 }
 
-.feature-text {
-  width: 50%;
-}
+
+
+/*****************************************SECTION GALLERY**********************************************/
 
 .image-gallery h2 {
   margin-bottom: 20px;
@@ -93,7 +95,7 @@ button:hover{
   height: auto;
 }
 
-/* Estilos adicionales según sea necesario */
+/*****************************************FOOTER**********************************************/
 
 footer {
   background: #333;
@@ -103,10 +105,10 @@ footer {
 }
 
 
+
 @media only screen and (width<800px) {
-  header {background-image: url(../imagenes/portadaresponsi.png);
-  text-align: center;}
   h1 {font-size: 50px;}
-  h3, p {font-size: 15px;
-  }
+  h3, p {font-size: 15px;}
+  .grid-2 {grid-template-columns: auto;}
+  .col-2 {font-size: 1.2em;}
 }
